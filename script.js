@@ -82,5 +82,27 @@ function renderCards() {
   `).join('');
 }
 
+function setupMobileNavigation() {
+  const nav = document.querySelector('.top-nav');
+  const toggle = document.querySelector('.nav-toggle');
+
+  if (!nav || !toggle) return;
+
+  toggle.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+    toggle.textContent = isOpen ? '×' : '☰';
+  });
+
+  nav.querySelectorAll('.nav-links a').forEach((link) => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.textContent = '☰';
+    });
+  });
+}
+
 renderTimeline();
 renderCards();
+setupMobileNavigation();
