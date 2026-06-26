@@ -40,8 +40,8 @@
       <p class="section-kicker">Document Cards</p>
       <h2>המסמכים הראשונים במאגר</h2>
       <p>
-        כל כרטיסייה כוללת שם, שנה, מקום, תקציר וכפתור לפתיחת חלון עם נוסח המסמך. בשלב זה חלק מן הנוסחים הם טקסט זמני,
-        ובהמשך יוחלפו בנוסח מקורי, תרגום עברי ומקורות ארכיוניים.
+        כל כרטיסייה כוללת שם, שנה, מקום ותקציר קצר. בהמשך נוסיף לכל מסמך עמוד נפרד עם נוסח מלא,
+        תמונה של המסמך המקורי, תרגום ומקורות.
       </p>
       <div class="cards-grid" id="documentsGrid" aria-live="polite"></div>
     </section>
@@ -55,21 +55,6 @@
       <a class="source-link" href="sources/bibliography.md">לרשימת המקורות הראשונית</a>
     </section>
   </main>
-
-  <div class="modal-backdrop" id="documentModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
-    <div class="modal-card">
-      <button class="modal-close" id="closeModal" aria-label="סגירת חלון">×</button>
-      <p class="modal-year" id="modalYear"></p>
-      <h2 id="modalTitle"></h2>
-      <p class="modal-place" id="modalPlace"></p>
-      <div class="modal-tabs" role="tablist" aria-label="שפות נוסח המסמך">
-        <button class="tab-button active" data-tab="he">עברית</button>
-        <button class="tab-button" data-tab="en">English</button>
-        <button class="tab-button" data-tab="original">Original</button>
-      </div>
-      <article class="modal-text" id="modalText"></article>
-    </div>
-  </div>
 
   <script src="script.js"></script>
 </body>
