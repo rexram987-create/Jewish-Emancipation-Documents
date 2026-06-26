@@ -30,10 +30,10 @@
 }
 
 .simulation-buttons button {
-  border: 1px solid var(--line);
+  border: 1px solid rgba(232, 183, 107, 0.5);
   border-radius: 999px;
-  background: var(--paper-soft);
-  color: var(--accent);
+  background: #2f2117;
+  color: #ffd28d;
   padding: 0.7rem 1rem;
   font-weight: 900;
   cursor: pointer;
@@ -55,15 +55,15 @@
 }
 
 .simulation-status strong {
-  color: var(--accent);
+  color: #ffd28d;
   font-size: 1.2rem;
 }
 
 .progress-track {
   width: 100%;
   height: 12px;
-  background: var(--paper-soft);
-  border: 1px solid var(--line);
+  background: #2b2118;
+  border: 1px solid rgba(232, 183, 107, 0.35);
   border-radius: 999px;
   overflow: hidden;
 }
@@ -71,18 +71,18 @@
 .progress-fill {
   width: 0%;
   height: 100%;
-  background: linear-gradient(90deg, var(--accent-dark), var(--accent));
+  background: linear-gradient(90deg, #b66f2c, #ffd28d);
   transition: width 0.45s ease;
 }
 
 .symbolic-map-wrapper {
   background:
-    radial-gradient(circle at center, rgba(197, 138, 69, 0.16), transparent 45%),
-    var(--paper);
-  border: 1px solid var(--line);
+    radial-gradient(circle at center, rgba(255, 210, 141, 0.32), transparent 48%),
+    linear-gradient(135deg, #2c2118, #1b1410 62%, #322316);
+  border: 1px solid rgba(232, 183, 107, 0.45);
   border-radius: 28px;
   padding: 1rem;
-  box-shadow: var(--shadow);
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.46), inset 0 0 80px rgba(255, 210, 141, 0.08);
   overflow: hidden;
 }
 
@@ -103,7 +103,7 @@
 
 .event-panel h2 {
   margin: 0;
-  color: var(--accent);
+  color: #ffd28d;
   font-size: clamp(2rem, 5vw, 3.5rem);
 }
 
@@ -124,16 +124,17 @@
 }
 
 .map-line {
-  stroke: rgba(197, 138, 69, 0.35);
-  stroke-width: 3;
+  stroke: rgba(255, 210, 141, 0.68);
+  stroke-width: 4;
   stroke-dasharray: 10 12;
   animation: dash-flow 8s linear infinite;
   transition: stroke 0.3s ease, stroke-width 0.3s ease;
+  filter: drop-shadow(0 0 7px rgba(255, 210, 141, 0.42));
 }
 
 .map-line.active-line {
-  stroke: rgba(244, 234, 220, 0.85);
-  stroke-width: 5;
+  stroke: #fff7e8;
+  stroke-width: 6;
 }
 
 .map-node {
@@ -142,54 +143,57 @@
 }
 
 .map-node circle {
-  fill: #211914;
-  stroke: var(--accent);
-  stroke-width: 3;
-  filter: drop-shadow(0 0 10px rgba(197, 138, 69, 0.35));
+  fill: #3b2a1d;
+  stroke: #ffd28d;
+  stroke-width: 4;
+  filter: drop-shadow(0 0 16px rgba(255, 210, 141, 0.58));
   transition: fill 0.25s ease, stroke-width 0.25s ease;
 }
 
 .map-node text {
-  fill: var(--ink);
+  fill: #fff7e8;
   font-size: 18px;
-  font-weight: 800;
+  font-weight: 900;
   text-anchor: middle;
   dominant-baseline: middle;
   pointer-events: none;
+  paint-order: stroke;
+  stroke: rgba(0, 0, 0, 0.55);
+  stroke-width: 3px;
 }
 
 .map-node .year-label {
-  fill: var(--accent);
+  fill: #ffd28d;
   font-size: 15px;
 }
 
 .map-node:hover,
 .map-node:focus,
 .map-node.active-node {
-  filter: drop-shadow(0 0 20px rgba(197, 138, 69, 0.72));
+  filter: drop-shadow(0 0 26px rgba(255, 210, 141, 0.9));
 }
 
 .map-node:hover circle,
 .map-node:focus circle,
 .map-node.active-node circle {
-  fill: #3a281d;
-  stroke-width: 5;
+  fill: #6a431f;
+  stroke-width: 6;
 }
 
 .map-node.completed-node circle {
-  fill: #2b2118;
-  stroke: #e6b66f;
+  fill: #4b3320;
+  stroke: #ffe0a8;
 }
 
 .map-pulse {
   fill: transparent;
-  stroke: rgba(197, 138, 69, 0.5);
-  stroke-width: 2;
+  stroke: rgba(255, 210, 141, 0.82);
+  stroke-width: 3;
   animation: pulse-ring 2.6s ease-out infinite;
 }
 
 .map-node.active-node .map-pulse {
-  stroke: rgba(244, 234, 220, 0.9);
+  stroke: #fff7e8;
   animation-duration: 1.35s;
 }
 
@@ -206,7 +210,7 @@
 }
 
 @keyframes pulse-ring {
-  0% { transform: scale(0.85); opacity: 0.75; }
+  0% { transform: scale(0.85); opacity: 0.85; }
   100% { transform: scale(1.35); opacity: 0; }
 }
 
@@ -218,7 +222,7 @@
 
 .country-card {
   background:
-    radial-gradient(circle at top right, rgba(197, 138, 69, 0.18), transparent 42%),
+    radial-gradient(circle at top right, rgba(255, 210, 141, 0.18), transparent 42%),
     var(--paper);
   border: 1px solid var(--line);
   border-radius: 22px;
@@ -236,7 +240,7 @@
 }
 
 .country-year {
-  color: var(--accent);
+  color: #ffd28d;
   font-weight: 900;
   letter-spacing: 0.04em;
 }
@@ -247,9 +251,9 @@
   margin-top: 0.2rem;
   border-radius: 999px;
   padding: 0.55rem 0.85rem;
-  background: var(--paper-soft);
-  border: 1px solid var(--line);
-  color: var(--accent);
+  background: #2f2117;
+  border: 1px solid rgba(232, 183, 107, 0.45);
+  color: #ffd28d;
   text-decoration: none;
   font-weight: 800;
 }
@@ -304,6 +308,10 @@
   }
 
   .map-node circle {
-    stroke-width: 4;
+    stroke-width: 5;
+  }
+
+  .map-line {
+    stroke-width: 5;
   }
 }
