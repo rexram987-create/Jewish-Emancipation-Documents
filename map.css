@@ -83,6 +83,7 @@
   border-radius: 28px;
   padding: 1rem;
   box-shadow: var(--shadow);
+  overflow: hidden;
 }
 
 .simulator-grid {
@@ -270,16 +271,39 @@
 }
 
 @media (max-width: 760px) {
+  .map-layout {
+    padding-left: 0.35rem;
+    padding-right: 0.35rem;
+  }
+
   .simulation-status {
     justify-content: center;
     text-align: center;
   }
 
+  .symbolic-map-wrapper {
+    padding: 0.35rem;
+    border-radius: 22px;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+  }
+
+  .symbolic-map {
+    width: 150%;
+    max-width: none;
+    transform: translateX(16%);
+  }
+
   .map-node text {
-    font-size: 15px;
+    font-size: 19px;
   }
 
   .map-node .year-label {
-    font-size: 13px;
+    font-size: 16px;
+  }
+
+  .map-node circle {
+    stroke-width: 4;
   }
 }
