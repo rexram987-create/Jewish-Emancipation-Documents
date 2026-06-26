@@ -40,11 +40,27 @@ body {
 .top-nav {
   position: static;
   display: flex;
-  justify-content: center;
-  gap: 0.7rem;
-  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 1.2rem;
   background: rgba(10, 7, 5, 0.92);
   border-bottom: 1px solid var(--line);
+}
+
+.nav-brand {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.45rem;
 }
 
 .top-nav a {
@@ -56,7 +72,8 @@ body {
 }
 
 .top-nav a:hover,
-.top-nav a:focus {
+.top-nav a:focus,
+.top-nav a.active {
   background: rgba(197, 138, 69, 0.18);
   color: #fff7e8;
 }
@@ -144,7 +161,11 @@ body {
 .primary-link:hover,
 .primary-link:focus,
 .source-link:hover,
-.source-link:focus {
+.source-link:focus,
+.secondary-link:hover,
+.secondary-link:focus,
+.document-status:hover,
+.document-status:focus {
   background: var(--accent-dark);
   color: #fff7e8;
 }
@@ -258,14 +279,20 @@ body {
   border-top: 1px solid var(--line);
 }
 
-@media (max-width: 680px) {
+@media (max-width: 760px) {
   .site-header {
     min-height: auto;
   }
 
   .top-nav {
-    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
     font-size: 0.92rem;
+  }
+
+  .nav-brand {
+    white-space: normal;
+    text-align: center;
   }
 
   .hero,
