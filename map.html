@@ -26,66 +26,93 @@
       <p class="eyebrow">Emancipation Map</p>
       <h1>מפת האמנציפציה היהודית</h1>
       <p>
-        מפה סימבולית מונפשת של תהליך האמנציפציה היהודית,
+        סימולטור סימבולי מונפש של תהליך האמנציפציה היהודית,
         עם קישורים ישירים מן המדינות אל דפי המסמכים עצמם.
       </p>
     </section>
 
     <section class="section-block map-layout">
       <article class="map-panel">
-        <h2>סימולטור מפת האמנציפציה</h2>
+        <h2>גרסה 1: סימולטור מפת האמנציפציה</h2>
         <p>
-          לחיצה על מדינה במפה תפתח את דף המסמך הרלוונטי. צרפת כוללת שני מסמכים, ולכן היא מובילה תחילה לרשימת המסמכים.
+          הפעילו את הסימולציה כדי לראות את חמשת האירועים הראשונים במאגר לפי סדר כרונולוגי.
         </p>
       </article>
 
+      <section class="simulation-controls" aria-label="פקדי סימולציה">
+        <div class="simulation-buttons">
+          <button id="startSimulation" type="button">▶ הפעל סימולציה</button>
+          <button id="pauseSimulation" type="button">⏸ השהה</button>
+          <button id="resumeSimulation" type="button">▶ המשך</button>
+          <button id="resetSimulation" type="button">⏹ איפוס</button>
+        </div>
+        <div class="simulation-status">
+          <strong id="currentYear">שנה: —</strong>
+          <span id="simulationCounter">0 מתוך 5 מסמכים</span>
+        </div>
+        <div class="progress-track" aria-hidden="true">
+          <div class="progress-fill" id="simulationProgress"></div>
+        </div>
+      </section>
+
       <p class="simulator-note">הנקודות והקווים הם ייצוג סימבולי, לא מפה גאוגרפית מדויקת.</p>
 
-      <section class="symbolic-map-wrapper" aria-label="סימולטור מפת האמנציפציה היהודית">
-        <svg class="symbolic-map" viewBox="0 0 900 520" role="img" aria-labelledby="mapTitle mapDesc">
-          <title id="mapTitle">מפה סימבולית של מסמכי האמנציפציה היהודית</title>
-          <desc id="mapDesc">מפת SVG מונפשת עם צמתים לחיצים עבור האימפריה ההבסבורגית, צרפת, הולנד ופרוסיה.</desc>
+      <section class="simulator-grid">
+        <section class="symbolic-map-wrapper" aria-label="סימולטור מפת האמנציפציה היהודית">
+          <svg class="symbolic-map" viewBox="0 0 900 520" role="img" aria-labelledby="mapTitle mapDesc">
+            <title id="mapTitle">מפה סימבולית של מסמכי האמנציפציה היהודית</title>
+            <desc id="mapDesc">מפת SVG מונפשת עם צמתים לחיצים עבור האימפריה ההבסבורגית, צרפת, הולנד ופרוסיה.</desc>
 
-          <line class="map-line" x1="250" y1="300" x2="410" y2="230" />
-          <line class="map-line" x1="410" y1="230" x2="555" y2="170" />
-          <line class="map-line" x1="555" y1="170" x2="670" y2="265" />
+            <line class="map-line" data-line="habsburg-france" x1="250" y1="300" x2="410" y2="230" />
+            <line class="map-line" data-line="france-netherlands" x1="410" y1="230" x2="555" y2="170" />
+            <line class="map-line" data-line="netherlands-prussia" x1="555" y1="170" x2="670" y2="265" />
 
-          <a href="documents/1782-edict-of-tolerance.html" aria-label="האימפריה ההבסבורגית, 1782">
-            <g class="map-node" transform="translate(250 300)">
-              <circle class="map-pulse" r="58" />
-              <circle r="48" />
-              <text y="-6">הבסבורג</text>
-              <text class="year-label" y="20">1782</text>
-            </g>
-          </a>
+            <a href="documents/1782-edict-of-tolerance.html" aria-label="האימפריה ההבסבורגית, 1782">
+              <g class="map-node" data-country="habsburg" transform="translate(250 300)">
+                <circle class="map-pulse" r="58" />
+                <circle class="node-core" r="48" />
+                <text y="-6">הבסבורג</text>
+                <text class="year-label" y="20">1782</text>
+              </g>
+            </a>
 
-          <a href="documents.html#sephardi-citizenship-1790" aria-label="צרפת, 1790 ו-1791">
-            <g class="map-node" transform="translate(410 230)">
-              <circle class="map-pulse" r="62" />
-              <circle r="52" />
-              <text y="-8">צרפת</text>
-              <text class="year-label" y="20">1790–1791</text>
-            </g>
-          </a>
+            <a href="documents/1790-sephardi-citizenship.html" aria-label="צרפת, 1790 ו-1791">
+              <g class="map-node" data-country="france" transform="translate(410 230)">
+                <circle class="map-pulse" r="62" />
+                <circle class="node-core" r="52" />
+                <text y="-8">צרפת</text>
+                <text class="year-label" y="20">1790–1791</text>
+              </g>
+            </a>
 
-          <a href="documents/1796-dutch-emancipation.html" aria-label="הולנד, 1796">
-            <g class="map-node" transform="translate(555 170)">
-              <circle class="map-pulse" r="56" />
-              <circle r="46" />
-              <text y="-6">הולנד</text>
-              <text class="year-label" y="20">1796</text>
-            </g>
-          </a>
+            <a href="documents/1796-dutch-emancipation.html" aria-label="הולנד, 1796">
+              <g class="map-node" data-country="netherlands" transform="translate(555 170)">
+                <circle class="map-pulse" r="56" />
+                <circle class="node-core" r="46" />
+                <text y="-6">הולנד</text>
+                <text class="year-label" y="20">1796</text>
+              </g>
+            </a>
 
-          <a href="documents/1812-prussian-edict.html" aria-label="פרוסיה, 1812">
-            <g class="map-node" transform="translate(670 265)">
-              <circle class="map-pulse" r="56" />
-              <circle r="46" />
-              <text y="-6">פרוסיה</text>
-              <text class="year-label" y="20">1812</text>
-            </g>
-          </a>
-        </svg>
+            <a href="documents/1812-prussian-edict.html" aria-label="פרוסיה, 1812">
+              <g class="map-node" data-country="prussia" transform="translate(670 265)">
+                <circle class="map-pulse" r="56" />
+                <circle class="node-core" r="46" />
+                <text y="-6">פרוסיה</text>
+                <text class="year-label" y="20">1812</text>
+              </g>
+            </a>
+          </svg>
+        </section>
+
+        <aside class="event-panel" aria-live="polite">
+          <p class="eyebrow">Current Event</p>
+          <h2 id="eventYear">בחרו הפעלה</h2>
+          <h3 id="eventCountry">הסימולציה מוכנה</h3>
+          <p id="eventTitle">לחצו על “הפעל סימולציה” כדי להתחיל.</p>
+          <p id="eventSummary">בכל שלב תופיע כאן המדינה, השנה, שם המסמך וקישור לפתיחת דף המסמך.</p>
+          <a id="eventLink" class="primary-link" href="documents.html">פתח את המסמך</a>
+        </aside>
       </section>
 
       <div class="country-grid">
@@ -122,5 +149,6 @@
   </main>
 
   <script src="script.js"></script>
+  <script src="simulation.js"></script>
 </body>
 </html>
