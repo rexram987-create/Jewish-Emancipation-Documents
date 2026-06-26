@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jewish Emancipation Documents | מסמכי האמנציפציה היהודית</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="top-nav" aria-label="ניווט ראשי">
+      <a href="#home">ראשי</a>
+      <a href="#timeline">ציר זמן</a>
+      <a href="#documents">מסמכים</a>
+      <a href="#sources">מקורות</a>
+    </nav>
+
+    <section id="home" class="hero">
+      <p class="eyebrow">מאגר היסטורי דו־לשוני</p>
+      <h1>מסמכי האמנציפציה היהודית</h1>
+      <h2>Jewish Emancipation Documents</h2>
+      <p>
+        מאגר זה נועד להציג את המסמכים, החוקים והצווים המרכזיים שקידמו את שוויון הזכויות של היהודים
+        במדינות שונות מן המאה ה־18 ועד ראשית המאה ה־20.
+      </p>
+      <p class="english-intro" dir="ltr">
+        This archive presents key documents, laws, decrees, and constitutional acts connected to the Jewish emancipation process.
+      </p>
+    </section>
+  </header>
+
+  <main>
+    <section id="timeline" class="section-block">
+      <p class="section-kicker">Chronological Timeline</p>
+      <h2>ציר זמן ראשוני</h2>
+      <div class="timeline" id="timelineList" aria-live="polite"></div>
+    </section>
+
+    <section id="documents" class="section-block">
+      <p class="section-kicker">Document Cards</p>
+      <h2>המסמכים הראשונים במאגר</h2>
+      <p>
+        כל כרטיסייה כוללת שם, שנה, מקום, תקציר וכפתור לפתיחת חלון עם נוסח המסמך. בשלב זה חלק מן הנוסחים הם טקסט זמני,
+        ובהמשך יוחלפו בנוסח מקורי, תרגום עברי ומקורות ארכיוניים.
+      </p>
+      <div class="cards-grid" id="documentsGrid" aria-live="polite"></div>
+    </section>
+
+    <section id="sources" class="section-block sources-box">
+      <p class="section-kicker">Sources</p>
+      <h2>מקורות ותיעוד</h2>
+      <p>
+        בהמשך יתווספו כאן קישורים לארכיונים, ספריות לאומיות, מהדורות רשמיות וסריקות של המסמכים המקוריים.
+      </p>
+      <a class="source-link" href="sources/bibliography.md">לרשימת המקורות הראשונית</a>
+    </section>
+  </main>
+
+  <div class="modal-backdrop" id="documentModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-card">
+      <button class="modal-close" id="closeModal" aria-label="סגירת חלון">×</button>
+      <p class="modal-year" id="modalYear"></p>
+      <h2 id="modalTitle"></h2>
+      <p class="modal-place" id="modalPlace"></p>
+      <div class="modal-tabs" role="tablist" aria-label="שפות נוסח המסמך">
+        <button class="tab-button active" data-tab="he">עברית</button>
+        <button class="tab-button" data-tab="en">English</button>
+        <button class="tab-button" data-tab="original">Original</button>
+      </div>
+      <article class="modal-text" id="modalText"></article>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
