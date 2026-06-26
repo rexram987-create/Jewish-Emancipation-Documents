@@ -17,7 +17,7 @@ const documents = [
     titleHe: 'צו הענקת אזרחות ליהודי ספרד ופורטוגל בצרפת',
     titleEn: 'Decree Granting Citizenship to Sephardi Jews',
     summaryHe: 'צעד מוקדם במהפכה הצרפתית שהכיר בזכויותיהם של יהודים ספרדים ופורטוגלים בצרפת.',
-    url: '#'
+    url: 'documents/1790-sephardi-citizenship.html'
   },
   {
     id: 'french-emancipation-1791',
@@ -37,7 +37,7 @@ const documents = [
     titleHe: 'צו השוואת היהודים לכל שאר האזרחים',
     titleEn: 'Decreet over den Gelykstaat der Joodsche met alle andere Burgers',
     summaryHe: 'המסמך שהעניק ליהודי הולנד שוויון אזרחי במסגרת הרפובליקה הבטאווית.',
-    url: '#'
+    url: 'documents/1796-dutch-emancipation.html'
   },
   {
     id: 'prussian-edict-1812',
@@ -47,7 +47,7 @@ const documents = [
     titleHe: 'צו בדבר מעמדם האזרחי של היהודים במדינת פרוסיה',
     titleEn: 'Edict Concerning the Civil Status of the Jews in the Prussian State',
     summaryHe: 'צו פרוסי חשוב שהכיר ביהודים כאזרחים, אם כי עדיין שמר חלק מן המגבלות.',
-    url: '#'
+    url: 'documents/1812-prussian-edict.html'
   }
 ];
 
@@ -71,20 +71,15 @@ function renderTimeline() {
 function renderCards() {
   if (!documentsGrid) return;
 
-  documentsGrid.innerHTML = documents.map((doc) => {
-    const linkText = doc.url === '#' ? 'עמוד יתווסף בהמשך' : 'כניסה לעמוד המסמך';
-    const linkClass = doc.url === '#' ? 'document-status disabled' : 'document-status';
-
-    return `
-      <article class="document-card" id="${doc.id}">
-        <div class="year">${doc.year}</div>
-        <h3>${doc.titleHe}</h3>
-        <p class="place">${doc.placeHe}</p>
-        <p>${doc.summaryHe}</p>
-        <a class="${linkClass}" href="${doc.url}">${linkText}</a>
-      </article>
-    `;
-  }).join('');
+  documentsGrid.innerHTML = documents.map((doc) => `
+    <article class="document-card" id="${doc.id}">
+      <div class="year">${doc.year}</div>
+      <h3>${doc.titleHe}</h3>
+      <p class="place">${doc.placeHe}</p>
+      <p>${doc.summaryHe}</p>
+      <a class="document-status" href="${doc.url}">כניסה לעמוד המסמך</a>
+    </article>
+  `).join('');
 }
 
 renderTimeline();
