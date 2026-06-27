@@ -48,6 +48,16 @@ const documents = [
     titleEn: 'Edict Concerning the Civil Status of the Jews in the Prussian State',
     summaryHe: 'צו פרוסי חשוב שהכיר ביהודים כאזרחים, אם כי עדיין שמר חלק מן המגבלות.',
     url: 'documents/1812-prussian-edict.html'
+  },
+  {
+    id: 'revolutions-emancipation-1848',
+    year: '1848',
+    placeHe: 'אירופה המרכזית והמערבית',
+    placeEn: 'Central and Western Europe',
+    titleHe: 'מהפכות אביב העמים והאמנציפציה היהודית',
+    titleEn: 'The Revolutions of 1848 and Jewish Emancipation',
+    summaryHe: 'עמוד מסכם על גל מהפכות, חוקות ודיונים פוליטיים שהרחיבו את רעיון השוויון האזרחי ליהודים באירופה.',
+    url: 'documents/1848-revolutions-jewish-emancipation.html'
   }
 ];
 
