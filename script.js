@@ -58,6 +58,16 @@ const documents = [
     titleEn: 'The Revolutions of 1848 and Jewish Emancipation',
     summaryHe: 'עמוד מסכם על גל מהפכות, חוקות ודיונים פוליטיים שהרחיבו את רעיון השוויון האזרחי ליהודים באירופה.',
     url: 'documents/1848-revolutions-jewish-emancipation.html'
+  },
+  {
+    id: 'austro-hungarian-emancipation-1867',
+    year: '1867',
+    placeHe: 'האימפריה האוסטרו־הונגרית',
+    placeEn: 'Austro-Hungarian Empire',
+    titleHe: 'חוק היסוד בדבר הזכויות הכלליות של האזרחים',
+    titleEn: 'Basic Law on the General Rights of Citizens',
+    summaryHe: 'חוק יסוד חוקתי שקבע שוויון אזרחי וחופש דת, והעניק ליהודי האימפריה בסיס משפטי רחב להשתלבות אזרחית.',
+    url: 'documents/1867-austro-hungarian-emancipation.html'
   }
 ];
 
