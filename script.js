@@ -68,6 +68,26 @@ const documents = [
     titleEn: 'Basic Law on the General Rights of Citizens',
     summaryHe: 'חוק יסוד חוקתי שקבע שוויון אזרחי וחופש דת, והעניק ליהודי האימפריה בסיס משפטי רחב להשתלבות אזרחית.',
     url: 'documents/1867-austro-hungarian-emancipation.html'
+  },
+  {
+    id: 'north-german-confederation-emancipation-1869',
+    year: '1869',
+    placeHe: 'הקונפדרציה הצפון־גרמנית',
+    placeEn: 'North German Confederation',
+    titleHe: 'חוק שוויון העדות הדתיות בזכויות אזרחיות ומדיניות',
+    titleEn: 'Law on the Equality of Confessions in Civil and Political Rights',
+    summaryHe: 'חוק שביטל מגבלות אזרחיות ומדיניות על בסיס דת, והיה צעד מרכזי בהשלמת האמנציפציה המשפטית של יהודי גרמניה.',
+    url: 'documents/1869-north-german-confederation-emancipation.html'
+  },
+  {
+    id: 'berlin-congress-1878',
+    year: '1878',
+    placeHe: 'אירופה / הבלקן',
+    placeEn: 'Europe / Balkans',
+    titleHe: 'קונגרס ברלין וזכויות היהודים',
+    titleEn: 'The Congress of Berlin and Jewish Civil Rights',
+    summaryHe: 'חוזה ברלין קישר בין הכרה בינלאומית במדינות חדשות לבין התחייבות לשוויון זכויות ללא אפליה דתית.',
+    url: 'documents/1878-berlin-congress.html'
   }
 ];
 
