@@ -97,30 +97,47 @@ function integrateDocumentIllustration() {
   const page = window.location.pathname.split('/').pop();
   const illustrations = {
     '1848-revolutions-jewish-emancipation.html': {
-      src: '../images/documents/1848-jewish-emancipation-revolutions.svg',
+      src: '../images/documents/1848-jewish-emancipation-revolutions.svg?v=3',
       alt: 'איור היסטורי של מהפכות 1848 והמאבק לשוויון זכויות ליהודים',
       caption: 'המחשה היסטורית של מהפכות 1848 והדיון בזכויות האזרח. אינה צילום ארכיוני.'
     },
     '1867-austro-hungarian-emancipation.html': {
-      src: '../images/documents/1867-austro-hungarian-basic-law.svg',
+      src: '../images/documents/1867-austro-hungarian-basic-law.svg?v=3',
       alt: 'שחזור חזותי של חוק היסוד האוסטרו־הונגרי משנת 1867',
       caption: 'שחזור חזותי של חוק היסוד מ־21 בדצמבר 1867. אינו סריקה ארכיונית מקורית.'
     },
+    '1869-north-german-confederation-emancipation.html': {
+      src: '../images/documents/1869-north-german-confederation-emancipation-law.svg?v=3',
+      alt: 'שחזור חזותי של חוק שוויון העדות הדתיות בקונפדרציה הצפון־גרמנית משנת 1869',
+      caption: 'שחזור חזותי היסטורי של החוק מ־3 ביולי 1869. אינו סריקה ארכיונית מקורית.'
+    },
     '1878-berlin-congress.html': {
-      src: '../images/documents/1878-berlin-congress.svg',
+      src: '../images/documents/1878-berlin-congress.svg?v=3',
       alt: 'איור היסטורי של קונגרס ברלין בשנת 1878',
       caption: 'המחשה היסטורית של קונגרס ברלין וחוזה ברלין משנת 1878. אינה צילום ארכיוני.'
     }
   };
+
   const item = illustrations[page];
   if (!item) return;
-  const placeholder = document.querySelector('.document-image-placeholder');
-  if (!placeholder) return;
-  placeholder.style.display = 'block';
-  placeholder.style.textAlign = 'center';
-  placeholder.innerHTML = `
-    <img src="${item.src}" alt="${item.alt}" loading="lazy"
-      style="max-width:100%; width:min(520px,100%); height:auto; border-radius:18px; box-shadow:0 18px 45px rgba(0,0,0,.45); border:1px solid var(--line); background:#f4eadc; padding:.4rem;" />
+
+  let figure = document.querySelector('.document-image-placeholder');
+  if (!figure) {
+    const firstPanel = document.querySelector('.document-panel');
+    if (!firstPanel) return;
+    const section = document.createElement('section');
+    section.className = 'section-block';
+    figure = document.createElement('figure');
+    figure.className = 'document-image-placeholder';
+    section.appendChild(figure);
+    firstPanel.parentNode.insertBefore(section, firstPanel);
+  }
+
+  figure.style.display = 'block';
+  figure.style.textAlign = 'center';
+  figure.innerHTML = `
+    <img src="${item.src}" alt="${item.alt}" loading="eager"
+      style="max-width:100%; width:min(620px,100%); height:auto; border-radius:18px; box-shadow:0 18px 45px rgba(0,0,0,.45); border:1px solid var(--line); background:#f4eadc; padding:.4rem;" />
     <figcaption style="margin-top:1rem; color:var(--muted);">${item.caption}</figcaption>`;
 }
 
