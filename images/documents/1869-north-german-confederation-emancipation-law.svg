@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600" role="img" aria-labelledby="title desc">
+  <title id="title">שחזור חזותי של חוק שוויון העדות הדתיות משנת 1869</title>
+  <desc id="desc">מסמך גרמני היסטורי בגוון קלף עם כותרת, עיטורים וחותם של הקונפדרציה הצפון־גרמנית.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#efe0bd"/>
+      <stop offset="0.5" stop-color="#dcc69b"/>
+      <stop offset="1" stop-color="#c5a978"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#1b120a" flood-opacity="0.45"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" seed="8" result="noise"/>
+      <feColorMatrix in="noise" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 .09 0"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="1600" fill="#17120e"/>
+  <rect x="92" y="72" width="1016" height="1456" rx="18" fill="url(#paper)" stroke="#6d4c28" stroke-width="5" filter="url(#shadow)"/>
+  <rect x="115" y="95" width="970" height="1410" rx="10" fill="none" stroke="#8b673a" stroke-width="2"/>
+  <rect x="130" y="110" width="940" height="1380" rx="8" fill="none" stroke="#ad8b55" stroke-width="1"/>
+  <g fill="#5b3b1c" opacity="0.72">
+    <circle cx="170" cy="150" r="4"/><circle cx="1040" cy="150" r="4"/><circle cx="170" cy="1450" r="4"/><circle cx="1040" cy="1450" r="4"/>
+  </g>
+  <g transform="translate(600 235)" fill="none" stroke="#2c2116" stroke-width="10">
+    <path d="M0-92 L28-44 L82-52 L52-8 L82 38 L28 28 L0 80 L-28 28 L-82 38 L-52-8 L-82-52 L-28-44 Z"/>
+    <path d="M-38-4 Q0-46 38-4 Q0 38-38-4Z"/>
+  </g>
+  <text x="600" y="390" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700" fill="#231a12">GESETZ</text>
+  <text x="600" y="455" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="28" fill="#382818">betreffend</text>
+  <text x="600" y="530" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="700" fill="#231a12">die Gleichberechtigung</text>
+  <text x="600" y="585" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="700" fill="#231a12">der Konfessionen</text>
+  <text x="600" y="650" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="#382818">in bürgerlicher und staatsbürgerlicher Beziehung</text>
+  <line x1="250" y1="710" x2="950" y2="710" stroke="#6e4b28" stroke-width="2"/>
+  <text x="600" y="775" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="#2c2116">Vom 3. Juli 1869</text>
+  <g font-family="Georgia, 'Times New Roman', serif" font-size="25" fill="#332518">
+    <text x="205" y="870">Alle noch bestehenden, aus der Verschiedenheit des religiösen</text>
+    <text x="205" y="914">Bekenntnisses hergeleiteten Beschränkungen der bürgerlichen und</text>
+    <text x="205" y="958">staatsbürgerlichen Rechte werden hiermit aufgehoben.</text>
+    <text x="205" y="1038">Insbesondere soll die Befähigung zur Teilnahme an der Gemeinde-</text>
+    <text x="205" y="1082">und Landesvertretung sowie zur Bekleidung öffentlicher Ämter</text>
+    <text x="205" y="1126">von dem religiösen Bekenntnisse unabhängig sein.</text>
+  </g>
+  <g transform="translate(600 1280)">
+    <circle r="116" fill="#7f1f1f" opacity="0.9"/>
+    <circle r="96" fill="none" stroke="#e4c88f" stroke-width="5"/>
+    <circle r="72" fill="none" stroke="#e4c88f" stroke-width="3"/>
+    <path d="M0-58 L18-22 L58-18 L28 10 L38 50 L0 30 L-38 50 L-28 10 L-58-18 L-18-22 Z" fill="#e4c88f"/>
+    <text y="88" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#e4c88f">NORDDEUTSCHER BUND · 1869</text>
+  </g>
+  <text x="600" y="1450" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#5b4026">Historische Rekonstruktion · keine archivalische Originalaufnahme</text>
+  <rect x="92" y="72" width="1016" height="1456" rx="18" filter="url(#grain)" opacity="0.55"/>
+</svg>
